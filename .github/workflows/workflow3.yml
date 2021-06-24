@@ -2,8 +2,8 @@
 name: workflow3
 
 on:
-  schedule:
-    - cron: '*/60 */24 * * *'
+  push:
+    
 
 
   workflow_dispatch:
