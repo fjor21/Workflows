@@ -12,6 +12,7 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -31,7 +32,7 @@ public class SeleniumTest {
 
 	@BeforeAll
 	public static void setupClass() {
-		WebDriverManager.chromedriver().setup();
+		WebDriverManager.chromedriver().version("91.0.4472.101").setup();
 	}
 
 	@BeforeEach
