@@ -48,5 +48,5 @@ jobs:
         run: |
           VERSION=$(mvn -q help:evaluate -Dexpression=project.version-DforceStdout)
           docker tag items ${{ secrets.DOCKERHUB_USERNAME }}/$IMAGE_NAME:$VERSION
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/$IMAGE_NAME:${{ steps.project.outputs.tag }}
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/$IMAGE_NAME:$VERSION
 
