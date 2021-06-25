@@ -70,3 +70,7 @@ jobs:
         run: heroku container:login
       - name: Login in Heroku
         run: heroku container:release web
+      - name: APIREST Test
+        run: mvn -Dhost=localhost -B '-Dtest=es.urjc.code.daw.library.e2e.rest.RestTest' test
+      - name: Selenium Test
+        run: mvn -Dhost=localhost -B '-Dtest=es.urjc.code.daw.library.e2e.selenium.SeleniumTest' test
